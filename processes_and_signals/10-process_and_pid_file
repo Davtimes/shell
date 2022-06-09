@@ -1,12 +1,10 @@
 #!/usr/bin/env bash
 # Kills the process of 4-to_infinity_and_beyond.
-sudo touch /var/run/holbertonscript.pid
-sudo bash -c 'echo $$ > /var/run/holbertonscript.pid'
-while true
-do
-    echo "To infinity and beyond"
-    sleep 2
-    trap 'echo "I hate the kill command"; sudo rm /var/run/holbertonscript.pid; exit' SIGTERM
-    trap 'echo "Y U no love me?!"' SIGINT
-    trap 'sudo rm /var/run/holbertonscript.pid; exit' SIGQUIT
+echo "$$" > /var/run/holbertonscript.pid
+trap "echo 'I hate the kill command'; rm /var/run/holbertonscript.pid; exit" SIGTERM
+trap "rm /var/run/holbertonscript.pid; exit" SIGQUIT
+trap "echo 'Y U no love me?!'" SIGINT
+while true; do
+      echo "To infinity and beyond"
+      sleep 2
 done
