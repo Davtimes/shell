@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+#script that prints best school 10 times
+COUNT=0
+while [ $COUNT -lt 10 ]
+do
+    if [ $COUNT = 8 ]
+    then
+        echo "Hi"
+    else
+        echo "Best School"
+    fi
+    (( COUNT++ )) || true
+done
