@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Kills the process of 4-to_infinity_and_beyond.
+#Prints infinity and beyond infinite times,when receives the SIGTERM signal print "I am invincible"
 while true
 do
     echo "To infinity and beyond"
