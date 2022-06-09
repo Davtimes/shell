@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-#script that prints best school 10 times
+# displays numbers from 1 to 20.
 COUNT=0
 while [ $COUNT -lt 10 ];
 do
